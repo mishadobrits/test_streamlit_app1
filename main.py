@@ -8,10 +8,8 @@ def change_keyboard(s):
     new_s = [tranlation.get(elem, elem) for elem in s]
     return "".join(new_s)
 
-
-command = "sudo apt-get install mkvmerge"
-print(command)
-os.system(command)
+import platform
+st.write(platform.system() + " " + platform.release())
 
 st.title("Title")
 text_input = st.text_input("Input english text here")
