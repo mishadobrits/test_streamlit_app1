@@ -9,7 +9,7 @@ def change_keyboard(s):
     return "".join(new_s)
 
 
-command = "apt-get install mkvmerge"
+command = "sudo apt-get install mkvmerge"
 print(command)
 os.system(command)
 
