@@ -1,5 +1,5 @@
 import streamlit as st
-
+import os
 
 def change_keyboard(s):
     en = "qwertyuiop[]asdfghjkl;'zxcvbnm,./"
@@ -8,8 +8,13 @@ def change_keyboard(s):
     new_s = [tranlation.get(elem, elem) for elem in s]
     return "".join(new_s)
 
-st.title("#First app")
+
+command = "apt-get install mkvmerge"
+print(command)
+os.system(command)
+
+st.title("Title")
 text_input = st.text_input("Input english text here")
 st.write(change_keyboard(text_input))
 text_input2 = st.text_input("Input english text here2")
-st.write(change_keyboard(text_input + text_input2))
+st.write(change_keyboard(text_input + " " + text_input2))
