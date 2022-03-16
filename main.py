@@ -11,3 +11,5 @@ def change_keyboard(s):
 st.title("#First app")
 text_input = st.text_input("Input english text here")
 st.write(change_keyboard(text_input))
+text_input2 = st.text_input("Input english text here")
+st.write(change_keyboard(text_input))
