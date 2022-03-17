@@ -2,7 +2,7 @@
 Testing process_one_video_in_computer function
 """
 
-from main import process_one_video_in_computer
+from main_1 import process_one_video_in_computer
 from settings import Settings
 from ffmpeg_caller import FFMPEGCaller
 from speed_up import (

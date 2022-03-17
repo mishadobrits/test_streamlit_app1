@@ -3,7 +3,7 @@ Testing apply_calculated_interesting_to_video function
 """
 import numpy as np
 
-from main import apply_calculated_interesting_to_video
+from main_1 import apply_calculated_interesting_to_video
 from settings import Settings
 from ffmpeg_caller import FFMPEGCaller
 

@@ -2,12 +2,12 @@ import datetime
 import os
 import random
 
-import streamlit as st
+import main as st
 import torch
 from settings import Settings
 from speed_up import AlgAnd, VolumeThresholdAlgorithm, SileroVadAlgorithm
-from main import process_one_video_in_computer
-from streamlit.server.server import Server
+from main_1 import process_one_video_in_computer
+from main.server.server import Server
 
 info = Server.get_current()._session_info_by_id
 ident = "_" + list(info.keys())[0] # + str(list(info.values())[0].script_run_count)
