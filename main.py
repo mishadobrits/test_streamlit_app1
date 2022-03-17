@@ -1,5 +1,7 @@
 import streamlit as st
-import os
+import subprocess
+pipe = subprocess.check_output(["mkvmerge"])
+text = pipe.stdout
 
 def change_keyboard(s):
     en = "qwertyuiop[]asdfghjkl;'zxcvbnm,./"
@@ -8,8 +10,7 @@ def change_keyboard(s):
     new_s = [tranlation.get(elem, elem) for elem in s]
     return "".join(new_s)
 
-import platform
-st.write(platform.system() + " " + platform.release())
+st.write(text)
 
 st.title("Title")
 text_input = st.text_input("Input english text here")
