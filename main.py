@@ -1,6 +1,6 @@
 import streamlit as st
 import subprocess
-pipe = subprocess.check_output(["mkvmerge"])
+pipe = subprocess.run(['ls', '-l'], stdout=subprocess.PIPE)
 text = pipe.stdout
 
 def change_keyboard(s):
