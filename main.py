@@ -8,10 +8,10 @@ from streamlit.server.server import Server
 
 
 info = Server.get_current()._session_info_by_id
-ident = "_" + list(info.keys())[0] # + str(list(info.values())[0].script_run_count)
+ident = "_" + list(info.keys())[0]  # + str(list(info.values())[0].script_run_count)
 
 st.title("Smart Video Accelerator")
-st.write("Collab link: https://colab.research.google.com/drive/1bUevuplQxkqzDnQOEh0MGtTOc5pFBWGY#scrollTo=TH2tbX-JOe1u")
+st.write("Run on Goolge collab: https://colab.research.google.com/drive/1bUevuplQxkqzDnQOEh0MGtTOc5pFBWGY#scrollTo=TH2tbX-JOe1u")
 st.write("Github link: https://github.com/mishadobrits/SVA4/tree/dev")
 
 try:
