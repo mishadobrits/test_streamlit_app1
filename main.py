@@ -1,19 +1,11 @@
-import os, sys
+import os
 import streamlit as st
 import torch
-import inspect
-currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parentdir = os.path.dirname(currentdir)
-sys.path.insert(0, parentdir)
 from settings import Settings
 from speed_up import AlgAnd, VolumeThresholdAlgorithm, SileroVadAlgorithm
 from main_1 import process_one_video_in_computer
 from streamlit.server.server import Server
 
-import subprocess
-
-pipe = subprocess.run(['mkvmerge', '--help'], stdout=subprocess.PIPE)
-st.write(pipe.stdout)
 
 info = Server.get_current()._session_info_by_id
 ident = "_" + list(info.keys())[0] # + str(list(info.values())[0].script_run_count)
